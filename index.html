@@ -5,29 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Helpalotl</title>
   <style>
-    * { box-sizing: border-box; }
-    html, body { height: 100%; margin: 0; }
-    /* Lay images in the same grid cell so the bubble overlays the axolotl */
+    html, body { height: 100%; margin: 0; background: #fff; }
     body {
       display: grid;
       grid-template-rows: auto auto;
       justify-items: center;
       align-items: center;
       gap: 24px;
-      background: #fff;
     }
     #axolotl, #bubble { height: auto; }
-    #axolotl {
-      grid-row: 1; grid-column: 1;
-      max-width: min(92vw, 900px);
-    }
-    #bubble {
-      grid-row: 1; grid-column: 1;          /* overlay in same cell */
-      max-width: 38%;                        /* size of the bubble */
-      align-self: start; justify-self: end;  /* top-right corner */
-      margin-top: 6%; margin-right: 8%;      /* tweak to aim the tail */
-      filter: drop-shadow(0 2px 2px rgba(0,0,0,.15));
-    }
+    #axolotl { grid-row: 1; grid-column: 1; max-width: min(92vw, 1000px); }
+    #bubble  { grid-row: 1; grid-column: 1; max-width: 38%;
+               align-self: start; justify-self: end;
+               margin-top: 6%; margin-right: 8%;
+               filter: drop-shadow(0 2px 2px rgba(0,0,0,.15)); }
     a.btn {
       grid-row: 2; grid-column: 1;
       text-decoration: none;
@@ -39,7 +30,7 @@
 </head>
 <body>
   <img id="axolotl" src="Julian%27s%20Axolotl%20Art.png" alt="">
-  <img id="bubble"  src="Save%20Me%21.png" alt="">
+  <img id="bubble"  src="Save%20Me%21.png"  alt="">
   <a class="btn" href="https://www.globalgiving.org/dy/v2/checkout/billing/" target="_blank" rel="noopener">donate!</a>
 </body>
 </html>
