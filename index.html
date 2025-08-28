@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Helpalotl.win</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: #f8fafc;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    h1 { margin: 0.5em 0; }
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      max-width: 900px;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+    }
+    .video-wrap {
+      aspect-ratio: 16/9;
+      width: 100%;
+      max-width: 900px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #e5e7eb;
+    }
+    .video-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .cta {
+      display: inline-block;
+      padding: 16px 24px;
+      background: #0ea5a5;
+      color: white;
+      font-weight: bold;
+      border-radius: 12px;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: background 0.2s;
+    }
+    .cta:hover { background: #0f766e; }
+    @media (max-width: 700px) {
+      .gallery { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="gallery">
+    <img src="assets/julian-axolotl-art.png" alt="Julian's axolotl art" />
+    <img src="assets/save-me.png" alt="Julian's Save Me! poster" />
+  </div>
+
+  <div class="video-wrap">
+    <iframe src="https://www.youtube.com/embed/bDEvAW9rIRk" title="Saving the axolotl and the Xochimilco wetland" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+
+  <a class="cta" href="https://goto.gg/f/75230" target="_blank" rel="noopener noreferrer">💖 Donate via GlobalGiving</a>
+
+</body>
+</html>
