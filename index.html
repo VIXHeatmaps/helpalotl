@@ -1,77 +1,44 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Helpalotl.win</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Helpalotl — Save Axolotl Habitats</title>
   <style>
-    body {
-      margin: 0;
-      font-family: system-ui, sans-serif;
-      background: #f8fafc;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
+    :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+    body { margin: 0; background:#0b1220; color:#f7f9fc; display:flex; min-height:100svh; }
+    .wrap { margin:auto; max-width:900px; padding:24px; text-align:center; }
+    img { max-width:100%; height:auto; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,.35); }
+    .grid { display:grid; gap:24px; }
+    .btn {
+      display:inline-block; padding:14px 22px; border-radius:999px; text-decoration:none;
+      background:#12b886; color:#06121a; font-weight:700; box-shadow:0 8px 24px rgba(18,184,134,.35);
     }
-    h1 { margin: 0.5em 0; }
-    .gallery {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      max-width: 900px;
-      width: 100%;
-      margin-bottom: 20px;
-    }
-    .gallery img {
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-      border: 1px solid #e5e7eb;
-    }
-    .video-wrap {
-      aspect-ratio: 16/9;
-      width: 100%;
-      max-width: 900px;
-      margin-bottom: 20px;
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid #e5e7eb;
-    }
-    .video-wrap iframe {
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-    .cta {
-      display: inline-block;
-      padding: 16px 24px;
-      background: #0ea5a5;
-      color: white;
-      font-weight: bold;
-      border-radius: 12px;
-      text-decoration: none;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      transition: background 0.2s;
-    }
-    .cta:hover { background: #0f766e; }
-    @media (max-width: 700px) {
-      .gallery { grid-template-columns: 1fr; }
-    }
+    iframe { width:100%; aspect-ratio:16/9; border:0; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,.35); }
+    h1 { margin:0 0 10px; font-size:clamp(28px, 4vw, 44px);}
+    p { margin:0 0 16px; opacity:.9; }
   </style>
 </head>
 <body>
+  <main class="wrap">
+    <h1>Helpalotl.win</h1>
+    <p>Julian’s fundraiser for axolotl habitat restoration.</p>
 
-  <div class="gallery">
-    <img src="assets/julian-axolotl-art.png" alt="Julian's axolotl art" />
-    <img src="assets/save-me.png" alt="Julian's Save Me! poster" />
-  </div>
+    <div class="grid">
+      <img src="julian-axolotl-art.png" alt="Julian's Axolotl Art">
+      <img src="save-me.png" alt="Save Me Axolotl">
 
-  <div class="video-wrap">
-    <iframe src="https://www.youtube.com/embed/bDEvAW9rIRk" title="Saving the axolotl and the Xochimilco wetland" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-  </div>
+      <!-- Replace the video ID below with your real YouTube ID -->
+      <iframe
+        src="https://www.youtube.com/embed/VIDEO_ID?rel=0"
+        title="Helpalotl Video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
 
-  <a class="cta" href="https://goto.gg/f/75230" target="_blank" rel="noopener noreferrer">💖 Donate via GlobalGiving</a>
-
+      <!-- Replace the href with your real donation link (PayPal/Donorbox/etc.) -->
+      <p><a class="btn" href="#" target="_blank" rel="noopener">Donate to Save Axolotls</a></p>
+    </div>
+  </main>
 </body>
 </html>
