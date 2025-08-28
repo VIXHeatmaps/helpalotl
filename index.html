@@ -6,24 +6,22 @@
 <title>Helpalotl</title>
 <style>
   :root{
-    /* Bubble placement you can fine-tune */
     --bubble-w: 38%;
-    --bubble-top: 4%;
-    --bubble-right: 6%;
+    --bubble-top: 5%;
+    --bubble-left: 6%;
     --gap: 28px;
     --btn-size: 1.1rem;
   }
   @media (min-width: 700px){
     :root{
       --bubble-w: 32%;
-      --bubble-top: 3.5%;
-      --bubble-right: 30%;
+      --bubble-top: 4%;
+      --bubble-left: 8%;
       --gap: 36px;
       --btn-size: 1.2rem;
     }
   }
 
-  /* Page layout */
   html, body { height: 100%; margin: 0; background:#000; }
   body{
     min-height: 100svh;
@@ -34,7 +32,6 @@
     gap: var(--gap);
   }
 
-  /* Image stage */
   .stage{
     position: relative;
     width: clamp(280px, 92vw, 980px);
@@ -44,17 +41,16 @@
     position: absolute;
     width: var(--bubble-w);
     top: var(--bubble-top);
-    right: var(--bubble-right);
+    left: var(--bubble-left);   /* switched from right → left */
     height: auto;
     filter: drop-shadow(0 2px 2px rgba(0,0,0,.35));
     pointer-events: none;
     user-select: none;
   }
 
-  /* Donate button */
   .btn{
     text-decoration: none;
-    background: #ff4fa3;          /* pink */
+    background: #ff4fa3;
     color: #fff;
     padding: 14px 28px;
     border-radius: 999px;
