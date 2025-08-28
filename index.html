@@ -7,7 +7,7 @@
 <style>
   :root{
     --bubble-w: 38%;
-    --bubble-top: 5%;
+    --bubble-top: 2%;   /* moved UP (was 5%) */
     --bubble-left: 6%;
     --gap: 28px;
     --btn-size: 1.1rem;
@@ -15,7 +15,7 @@
   @media (min-width: 700px){
     :root{
       --bubble-w: 32%;
-      --bubble-top: 4%;
+      --bubble-top: 1.5%;  /* moved UP (was 4%) */
       --bubble-left: 8%;
       --gap: 36px;
       --btn-size: 1.2rem;
@@ -41,7 +41,7 @@
     position: absolute;
     width: var(--bubble-w);
     top: var(--bubble-top);
-    left: var(--bubble-left);   /* switched from right → left */
+    left: var(--bubble-left);
     height: auto;
     filter: drop-shadow(0 2px 2px rgba(0,0,0,.35));
     pointer-events: none;
