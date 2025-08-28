@@ -3,42 +3,43 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Helpalotl — Save Axolotl Habitats</title>
+  <title>Helpalotl</title>
   <style>
-    :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
-    body { margin: 0; background:#0b1220; color:#f7f9fc; display:flex; min-height:100svh; }
-    .wrap { margin:auto; max-width:900px; padding:24px; text-align:center; }
-    img { max-width:100%; height:auto; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,.35); }
-    .grid { display:grid; gap:24px; }
-    .btn {
-      display:inline-block; padding:14px 22px; border-radius:999px; text-decoration:none;
-      background:#12b886; color:#06121a; font-weight:700; box-shadow:0 8px 24px rgba(18,184,134,.35);
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    /* Lay images in the same grid cell so the bubble overlays the axolotl */
+    body {
+      display: grid;
+      grid-template-rows: auto auto;
+      justify-items: center;
+      align-items: center;
+      gap: 24px;
+      background: #fff;
     }
-    iframe { width:100%; aspect-ratio:16/9; border:0; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,.35); }
-    h1 { margin:0 0 10px; font-size:clamp(28px, 4vw, 44px);}
-    p { margin:0 0 16px; opacity:.9; }
+    #axolotl, #bubble { height: auto; }
+    #axolotl {
+      grid-row: 1; grid-column: 1;
+      max-width: min(92vw, 900px);
+    }
+    #bubble {
+      grid-row: 1; grid-column: 1;          /* overlay in same cell */
+      max-width: 38%;                        /* size of the bubble */
+      align-self: start; justify-self: end;  /* top-right corner */
+      margin-top: 6%; margin-right: 8%;      /* tweak to aim the tail */
+      filter: drop-shadow(0 2px 2px rgba(0,0,0,.15));
+    }
+    a.btn {
+      grid-row: 2; grid-column: 1;
+      text-decoration: none;
+      color: #fff; background: #111;
+      padding: 14px 26px; border-radius: 999px;
+      font: 600 1.25rem/1.1 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    }
   </style>
 </head>
 <body>
-  <main class="wrap">
-    <h1>Helpalotl.win</h1>
-    <p>Julian’s fundraiser for axolotl habitat restoration.</p>
-
-    <div class="grid">
-      <img src="julian-axolotl-art.png" alt="Julian's Axolotl Art">
-      <img src="save-me.png" alt="Save Me Axolotl">
-
-      <!-- Replace the video ID below with your real YouTube ID -->
-      <iframe
-        src="https://www.youtube.com/embed/VIDEO_ID?rel=0"
-        title="Helpalotl Video"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
-
-      <!-- Replace the href with your real donation link (PayPal/Donorbox/etc.) -->
-      <p><a class="btn" href="#" target="_blank" rel="noopener">Donate to Save Axolotls</a></p>
-    </div>
-  </main>
+  <img id="axolotl" src="Julian%27s%20Axolotl%20Art.png" alt="">
+  <img id="bubble"  src="Save%20Me%21.png" alt="">
+  <a class="btn" href="https://www.globalgiving.org/dy/v2/checkout/billing/" target="_blank" rel="noopener">donate!</a>
 </body>
 </html>
